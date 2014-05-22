@@ -1,7 +1,7 @@
 import random
 from django_faker.guessers import Name
 from django.db.models.fields import *
-from django.db.models import ForeignKey, ManyToManyField, OneToOneField, ImageField
+from django.db.models import ForeignKey, ManyToManyField, OneToOneField, ImageField, FileField
 
 
 class FieldTypeGuesser(object):
@@ -39,6 +39,7 @@ class FieldTypeGuesser(object):
             return lambda x: getattr(generator,protocolIp)()
         if isinstance(field, EmailField): return lambda x: generator.email()
         if isinstance(field, ImageField): return lambda x: None
+        if isinstance(field, FileField): return lambda x: None
 
         raise AttributeError(field)
 
