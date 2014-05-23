@@ -14,14 +14,14 @@ def read_file(filename):
 
 setup(
     name='django-faker',
-    version=__import__('django_faker').__version__,
+    version='1.1.1',
     author='joke2k',
     author_email='joke2k@gmail.com',
     packages=find_packages(),
     include_package_data=True,
     url='http://github.com/joke2k/django-faker',
     license='MIT',
-    description=u' '.join(__import__('django_faker').__doc__.splitlines()).strip(),
+    description="""Django-faker uses python-faker to generate test data for Django models and templates.""",
     classifiers=[
         # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Development Status :: 3 - Alpha',

@@ -3,9 +3,10 @@
 Django-faker uses python-faker to generate test data for Django models and templates.
 
 """
-from django.conf import settings
 
-__version__ = '0.2'
+__version__ = '1.1.1'
+
+from django.conf import settings
 
 class Faker(object):
 
